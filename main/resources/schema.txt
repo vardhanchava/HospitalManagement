@@ -1,0 +1,18 @@
+create table patient(
+id int primary key,
+patiendid varchar(50),
+name varchar(100),
+age int,
+gender varchar(10),
+dateofjoining date
+);
+create table treatments(
+id int primary key,
+Serialno int,
+PatientId varchar(100),
+Diagnosis varchar(100),
+Treatment varchar(100),
+Dateoftreatment date,
+Cost float,
+foreign key(Serialno) references Patients(id)
+);
